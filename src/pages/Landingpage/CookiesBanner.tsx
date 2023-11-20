@@ -20,7 +20,7 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#005B7F',
-      main: '#11998E',
+      main: '#000',
       dark: '#05786e',
       contrastText: '#fff',
     },
@@ -155,8 +155,11 @@ const CookiesBanner = () => {
               color='primary'
               size={isMobile ? 'medium' : 'large'}
               onClick={handleAccept}
-              style={{ border: '1px solid #11998E', marginBottom: '10px', width: '100%' }}
+              style={{ border: '1px solid #000', marginBottom: '10px', width: '100%' }}
               variant='contained'
+              sx={{ '&:hover': {
+                backgroundColor: '#000',
+              }, }}
             >
               {isDeutsch
                 ? translationFunction().deutschTranslations.cookies3
@@ -166,7 +169,7 @@ const CookiesBanner = () => {
               color='primary'
               size={isMobile ? 'medium' : 'large'}
               onClick={handleDecline}
-              style={{ border: '1px solid #11998E', marginBottom: '10px', width: '100%' }}
+              style={{ border: '1px solid #000', marginBottom: '10px', width: '100%' }}
               variant='outlined'
             >
               {isDeutsch
@@ -177,7 +180,7 @@ const CookiesBanner = () => {
               color='primary'
               size={isMobile ? 'medium' : 'large'}
               onClick={handleCustomize}
-              style={{ border: '1px solid #11998E', width: '100%' }}
+              style={{ border: '1px solid #000', width: '100%' }}
               variant='outlined'
             >
               {isDeutsch

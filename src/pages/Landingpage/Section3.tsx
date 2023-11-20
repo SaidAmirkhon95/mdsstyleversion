@@ -113,12 +113,13 @@ const Section3 = () => {
                 sx={{
                   width: isMobile ? 305 : 405,
                   height: isMobile ? 450 : 500,
+                  borderRadius: '0%',
                 }}
               >
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '70%' }}
                   image='./FraunhoferISST.png'
-                  style={{ backgroundColor: '#f5f7f7' }}
+                  style={{ backgroundColor: '#ffff00' }}
                 />
                 <CardContent>
                   <Typography variant='body1' color='text.secondary' textAlign='center'>
@@ -150,7 +151,19 @@ const Section3 = () => {
                   </Typography>
                 </CardContent>
                 <CardActions sx={{ justifyContent: 'center', mt: '0px', alignItems: 'stretch' }}>
-                  <Button size='small' target='_blank' href='https://www.isst.fraunhofer.de/'>
+                  <Button
+                    size='small'
+                    target='_blank'
+                    href='https://www.isst.fraunhofer.de/'
+                    sx={{
+                      color: 'black',
+                      textDecoration: 'underline',
+                      '&:hover': {
+                        backgroundColor: 'none',
+                        textDecoration: 'underline',
+                      },
+                    }}
+                  >
                     Fraunhofer ISST
                   </Button>
                 </CardActions>
@@ -167,12 +180,13 @@ const Section3 = () => {
                 sx={{
                   width: isMobile ? 305 : 405,
                   height: isMobile ? 450 : 500,
+                  borderRadius: '0%',
                 }}
               >
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '50%' }}
                   image='./logo_MDS_black.svg'
-                  style={{ backgroundColor: '#f5f7f7' }}
+                  style={{ backgroundColor: '#ffff00' }}
                 />
                 <CardContent>
                   <Typography variant='body1' color='text.secondary' textAlign='center'>
@@ -211,7 +225,19 @@ const Section3 = () => {
                     marginTop: isMobile ? '-30px' : '',
                   }}
                 >
-                  <Button size='small' target='_blank' href='https://mobility-dataspace.eu/'>
+                  <Button
+                    size='small'
+                    target='_blank'
+                    href='https://mobility-dataspace.eu/'
+                    sx={{
+                      color: 'black',
+                      textDecoration: 'underline',
+                      '&:hover': {
+                        backgroundColor: 'none',
+                        textDecoration: 'underline',
+                      },
+                    }}
+                  >
                     Mobility Data Space
                   </Button>
                 </CardActions>
@@ -228,12 +254,13 @@ const Section3 = () => {
                 sx={{
                   width: isMobile ? 305 : 405,
                   height: isMobile ? 450 : 500,
+                  borderRadius: '0%',
                 }}
               >
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '70%' }}
                   image='./DSSC_logo_4c.png'
-                  style={{ backgroundColor: '#f5f7f7' }}
+                  style={{ backgroundColor: '#ffff00' }}
                 />
                 <CardContent>
                   <Typography variant='body1' color='text.secondary' textAlign='center'>
@@ -262,7 +289,19 @@ const Section3 = () => {
                   </Typography>
                 </CardContent>
                 <CardActions sx={{ justifyContent: 'center', mt: '24px', alignItems: 'stretch' }}>
-                  <Button size='small' target='_blank' href='https://dssc.eu/'>
+                  <Button
+                    size='small'
+                    target='_blank'
+                    href='https://dssc.eu/'
+                    sx={{
+                      color: 'black',
+                      textDecoration: 'underline',
+                      '&:hover': {
+                        backgroundColor: 'none',
+                        textDecoration: 'underline',
+                      },
+                    }}
+                  >
                     Data Spaces Support Centre
                   </Button>
                 </CardActions>
@@ -296,7 +335,18 @@ const Section3 = () => {
           <Button
             component={RouterLink}
             to={'/reiter'}
-            sx={{ textTransform: 'none', textAlign: 'center', mt: 2, fontSize: '16px' }}
+            sx={{
+              textTransform: 'none',
+              textAlign: 'center',
+              mt: 2,
+              fontSize: '16px',
+              color: 'black',
+              textDecoration: 'underline',
+              '&:hover': {
+                backgroundColor: 'none',
+                textDecoration: 'underline',
+              },
+            }}
           >
             Zum Connector Onboarding
           </Button>
@@ -318,12 +368,17 @@ const Section3 = () => {
             '@media (min-width: 1536px)': {
               marginTop: '160px',
             },
+            backgroundColor: 'black',
           }}
           maxWidth='2000px'
           overflow='hidden'
-          marginBottom='20px'
+          marginBottom='0px'
+          height='150px'
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
         >
-          <Typography variant='body2' color='text.secondary' align='center'>
+          <Typography variant='body2' color='white' align='center' fontSize='20px'>
             {'Copyright © '}
             <Link color='inherit' target='_blank' href='https://www.isst.fraunhofer.de/'>
               Fraunhofer ISST
@@ -337,6 +392,7 @@ const Section3 = () => {
                 justifyContent: 'center',
                 marginTop: '20px',
                 gap: '8rem',
+                fontSize: '18px',
                 '@media (max-width: 600px)': {
                   flexDirection: 'column',
                   justifyContent: 'center',

@@ -20,7 +20,7 @@ code {
 }
 
 .activePaginate {
-  background-color: #009374;
+  background-color: #000;
   display: inline-block;
   border-radius: 50%;
   width: 20px;

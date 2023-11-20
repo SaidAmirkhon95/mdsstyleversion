@@ -22,7 +22,6 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { createTheme } from '@mui/material/styles';
 import TranslationButton from '../../components/TranslationButton';
 import { useLanguage } from '../../LanguageContext';
-import AddchartIcon from '@mui/icons-material/Addchart';
 
 const drawerWidth = 240;
 const theme = createTheme({

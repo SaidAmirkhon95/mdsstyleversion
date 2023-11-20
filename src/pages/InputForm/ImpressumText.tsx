@@ -58,7 +58,7 @@ const ImpressumText = () => {
           marginBottom={isMobile ? '20px' : '40px'}
         >
           <Typography variant={isMobile ? 'subtitle1' : isTablet ? 'h5' : 'h4'}>
-            <h1 style={{ color: '#005B7F' }}>
+            <h1 style={{ color: 'black' }}>
               {isDeutsch
                 ? translationFunction().deutschTranslations.impressum
                 : translationFunction().englishTranslations.impressum}
@@ -157,8 +157,17 @@ const ImpressumText = () => {
         </Typography>
       </body>
       <br />
-      <footer style={{ marginBottom: '20px' }}>
-        <Typography variant='body2' color='text.secondary' align='center'>
+      <footer
+        style={{
+          marginBottom: '0px',
+          height: '150px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'black',
+        }}
+      >
+        <Typography variant='body2' color='white' align='center' fontSize='20px'>
           {'Copyright © '}
           <Link color='inherit' target='_blank' href='https://www.isst.fraunhofer.de/'>
             Fraunhofer ISST
@@ -172,6 +181,7 @@ const ImpressumText = () => {
               justifyContent: 'center',
               marginTop: '20px',
               gap: '8rem',
+              fontSize: '18px',
               '@media (max-width: 600px)': {
                 flexDirection: 'column',
                 alignItems: 'center',

@@ -269,11 +269,17 @@ const AboutSection7 = () => {
               '@media (min-width: 1536px)': {
                 marginTop: '200px',
               },
+              backgroundColor: 'black',
             }}
             maxWidth='2000px'
             overflow='hidden'
+            marginBottom='-20px'
+            height='150px'
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
           >
-            <Typography variant='body2' color='text.secondary' align='center'>
+            <Typography variant='body2' color='white' align='center' fontSize='20px'>
               {'Copyright © '}
               <Link color='inherit' target='_blank' href='https://www.isst.fraunhofer.de/'>
                 Fraunhofer ISST
@@ -287,6 +293,7 @@ const AboutSection7 = () => {
                   justifyContent: 'center',
                   marginTop: '20px',
                   gap: '8rem',
+                  fontSize: '18px',
                   '@media (max-width: 600px)': {
                     flexDirection: 'column',
                     justifyContent: 'center',

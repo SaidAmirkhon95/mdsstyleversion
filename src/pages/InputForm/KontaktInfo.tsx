@@ -61,7 +61,7 @@ const KontaktInfo = () => {
         >
           <Grid item xs={12} sm={6}>
             <Typography variant={isMobile ? 'h5' : 'h4'}>
-              <h1 style={{ color: '#005B7F' }}>
+              <h1 style={{ color: 'Black' }}>
                 {isDeutsch
                   ? translationFunction().deutschTranslations.kontakt
                   : translationFunction().englishTranslations.kontakt}
@@ -224,9 +224,22 @@ const KontaktInfo = () => {
       <br />
       <footer>
         <Grid container direction='column' justifyContent='center' alignItems='flex-end'>
-          <div style={{ marginBottom: '6rem' }}></div>
-          <Grid container direction='row' justifyContent='center' alignItems='flex-end'>
-            <Typography variant='body2' color='text.secondary' align='center'>
+          <div style={{ marginBottom: '3.2rem' }}></div>
+          <Grid
+            container
+            direction='row'
+            justifyContent='center'
+            alignItems='flex-end'
+            sx={{
+              marginBottom: '0px',
+              height: '150px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'black',
+            }}
+          >
+            <Typography variant='body2' color='white' align='center' fontSize='20px'>
               {'Copyright © '}
               <Link color='inherit' target='_blank' href='https://www.isst.fraunhofer.de/'>
                 Fraunhofer ISST
@@ -240,6 +253,7 @@ const KontaktInfo = () => {
                   justifyContent: 'center',
                   marginTop: '20px',
                   gap: '8rem',
+                  fontSize: '18px',
                   '@media (max-width: 600px)': {
                     flexDirection: 'column',
                     alignItems: 'center',

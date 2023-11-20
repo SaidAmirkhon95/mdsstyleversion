@@ -169,13 +169,20 @@ const Section2 = () => {
                     component={Link}
                     to={'/info'}
                     size={isMobile ? 'small' : 'large'}
-                    sx={{ marginTop: isMobile ? '0px' : '-5px' }}
+                    sx={{
+                      marginTop: isMobile ? '0px' : '-5px',
+                      color: 'black',
+                      '&:hover': {
+                        backgroundColor: 'none',
+                        textDecoration: 'underline',
+                      },
+                    }}
                   >
                     <InfoIcon
                       sx={{
                         verticalAlign: 'small',
                         ml: '0px',
-                        color: 'primary.main',
+                        color: 'black',
                         marginRight: '5px',
                         marginBottom: '5px',
                       }}

@@ -43,7 +43,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -93,7 +107,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -143,7 +171,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -193,7 +235,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -243,7 +299,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -293,7 +363,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -339,7 +423,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -385,7 +483,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -431,7 +543,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -477,7 +603,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -523,7 +663,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -569,7 +723,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -615,7 +783,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -661,7 +843,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -707,7 +903,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -753,7 +963,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -799,7 +1023,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -845,7 +1083,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -891,7 +1143,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -937,7 +1203,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -983,7 +1263,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),
@@ -1029,7 +1323,21 @@ const Connectors = [
     price: 'Preis €',
     score: '100%',
     link: (
-      <Button variant='contained' sx={{ mt: 3, ml: 1 }} href=''>
+      <Button
+        variant='contained'
+        sx={{
+          mt: 3,
+          ml: 1,
+          backgroundColor: '#ffff00',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#ffff00',
+            color: '#000',
+          },
+          borderRadius: '0%',
+        }}
+        href=''
+      >
         Weiter
       </Button>
     ),

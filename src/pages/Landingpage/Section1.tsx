@@ -16,13 +16,13 @@ const Section1 = () => {
     palette: {
       primary: {
         light: '#005B7F',
-        main: '#009374',
+        main: '#ffff00',
         dark: '#005946',
         contrastText: '#fff',
       },
       secondary: {
         light: '#0080b2',
-        main: '#005B7F',
+        main: '#00843D',
         dark: '#0080b2',
         contrastText: '#fff',
       },
@@ -169,13 +169,20 @@ const Section1 = () => {
                     component={Link}
                     to={'/info'}
                     size={isMobile ? 'small' : 'large'}
-                    sx={{ marginTop: isMobile ? '0px' : '-5px' }}
+                    sx={{
+                      marginTop: isMobile ? '0px' : '-5px',
+                      color: 'black',
+                      '&:hover': {
+                        backgroundColor: 'none',
+                        textDecoration: 'underline',
+                      },
+                    }}
                   >
                     <InfoIcon
                       sx={{
                         verticalAlign: 'small',
                         ml: '0px',
-                        color: 'primary.main',
+                        color: 'black',
                         marginRight: '5px',
                         marginBottom: '5px',
                       }}
@@ -213,7 +220,7 @@ const Section1 = () => {
                       width: isMobile ? 320 : isTablet ? 380 : 600,
                       height: isMobile ? 125 : isTablet ? 130 : 200,
                       mt: '20px',
-                      borderRadius: '20px',
+                      borderRadius: '0px',
                       background: isMobile
                         ? 'url(./logo_MDS_black.svg) 25%, url(./FraunhoferISST.png) 75%'
                         : isTablet
@@ -242,6 +249,7 @@ const Section1 = () => {
                     sx={{
                       width: isMobile ? 320 : isTablet ? 350 : 405,
                       height: isMobile ? 95 : 120,
+                      borderRadius: '0px',
                     }}
                   >
                     <CardMedia

@@ -78,7 +78,7 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#005B7F',
-      main: '#11998E',
+      main: '#000', //'#ffff00',
       dark: '#005946',
       contrastText: '#fff',
     },
@@ -249,6 +249,12 @@ export default function ReiterForConnector() {
                         '@media (max-width: 550px)': {
                           fontSize: 'small',
                         },
+                        color: '#fff',
+                        backgroundColor: '#000',
+                        borderRadius: '0%',
+                        '&:hover': {
+                          backgroundColor: '#000',
+                        },
                       }}
                       style={{ textTransform: 'none' }}
                       size='large'
@@ -276,6 +282,12 @@ export default function ReiterForConnector() {
                             '@media (max-width: 550px)': {
                               fontSize: 'small',
                             },
+                            color: '#fff',
+                            backgroundColor: '#000',
+                            borderRadius: '0%',
+                            '&:hover': {
+                              backgroundColor: '#000',
+                            },
                           }}
                           style={{ textTransform: 'none' }}
                           size='large'
@@ -298,6 +310,12 @@ export default function ReiterForConnector() {
                             '@media (max-width: 550px)': {
                               fontSize: 'small',
                             },
+                            color: '#fff',
+                            backgroundColor: '#000',
+                            borderRadius: '0%',
+                            '&:hover': {
+                              backgroundColor: '#000',
+                            },
                           }}
                           style={{ textTransform: 'none' }}
                           size='large'
@@ -314,7 +332,16 @@ export default function ReiterForConnector() {
                   <Button
                     variant='outlined'
                     onClick={handleNext}
-                    sx={{ mt: 3, ml: 1 }}
+                    sx={{
+                      mt: 3,
+                      ml: 1,
+                      color: '#fff',
+                      backgroundColor: '#000',
+                      borderRadius: '0%',
+                      '&:hover': {
+                        backgroundColor: '#000',
+                      },
+                    }}
                     style={{ textTransform: 'none' }}
                     size='large'
                   >

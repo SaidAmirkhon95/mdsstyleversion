@@ -14,13 +14,13 @@ const Header = () => {
     palette: {
       primary: {
         light: '#005B7F',
-        main: '#009374',
+        main: '#ffff00',
         dark: '#005946',
         contrastText: '#fff',
       },
       secondary: {
         light: '#0080b2',
-        main: '#005B7F',
+        main: '#00843D',
         dark: '#0080b2',
         contrastText: '#fff',
       },
@@ -151,16 +151,17 @@ const Header = () => {
                   <Button
                     component={Link}
                     to={'/app'}
-                    variant='contained'
+                    /* variant='contained' */
                     sx={{
                       mt: '18px',
                       width: isMobile ? '130px' : isTablet ? '190px' : '230px',
                       height: '60px',
                       textTransform: 'none',
-                      color: 'primary',
-                      '&&:focus': {
-                        backgroundColor: '#343a55',
+                      '&:hover': {
+                        backgroundColor: '#000',
                       },
+                      backgroundColor: '#000',
+                      borderRadius: '0%',
                     }}
                   >
                     <Typography
@@ -172,44 +173,45 @@ const Header = () => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         textAlign: 'center',
+                        color: '#fff',
+                        '&:hover': {
+                          color: '#fff',
+                        },
                       }}
                     >
-                      <OverlappingContainer>
-                        <BaseText>
-                          {isDeutsch
-                            ? translationFunction().deutschTranslations.empfehlungStarten
-                            : translationFunction().englishTranslations.empfehlungStarten}
-                        </BaseText>
-                        {/* <OverlappedText>Coming Soon</OverlappedText> */}
-                      </OverlappingContainer>
-                      {/* {isDeutsch
+                      {isDeutsch
                         ? translationFunction().deutschTranslations.empfehlungStarten
                         : translationFunction().englishTranslations.empfehlungStarten}
-                      <span style={{ fontSize: '15px', marginTop: '8px' }}>Coming Soon</span> */}
                     </Typography>
                   </Button>
                   <Button
                     component={Link}
                     to={'/about'}
-                    variant='outlined'
+                    /* variant='outlined' */
+                    variant='contained'
                     sx={{
                       ml: '30px',
                       mt: '18px',
                       width: isMobile ? '130px' : isTablet ? '190px' : '230px',
                       height: '60px',
-
                       textTransform: 'none',
-                      color: '#primary',
-
-                      '&&:focus': {
-                        backgroundColor: '#343a55',
+                      color: '#fff',
+                      backgroundColor: '#000',
+                      '&:hover': {
+                        backgroundColor: '#000',
                       },
+                      borderRadius: '0%',
                     }}
                   >
                     <Typography
                       component='body'
                       variant={isMobile ? 'body2' : isTablet ? 'h6' : 'h5'}
-                      sx={{ whiteSpace: 'nowrap' }}
+                      sx={{
+                        whiteSpace: 'nowrap',
+                        '&:hover': {
+                          color: '#fff',
+                        },
+                      }}
                     >
                       {isDeutsch
                         ? translationFunction().deutschTranslations.weiterInfo

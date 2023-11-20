@@ -22,6 +22,8 @@ import { useEffect, useState } from 'react';
 import { useLanguage } from '../../LanguageContext';
 import translationFunction from 'translationFunction';
 import { useMyContext } from '../../MyContext';
+import { styled } from '@mui/system';
+import StepConnector from '@mui/material/StepConnector';
 
 function Copyright() {
   return (
@@ -78,7 +80,7 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#005B7F',
-      main: '#11998E',
+      main: '#000', //'#ffff00',
       dark: '#005946',
       contrastText: '#fff',
     },
@@ -379,6 +381,21 @@ export default function MDSxNRW() {
   }, []);
   const { isDeutsch } = useLanguage();
 
+  const StyledStepLabel = styled(StepLabel)(({ theme }) => ({
+    '& .MuiStepLabel-label': {
+      color: 'black',
+    },
+    '& .MuiStepIcon-root': {
+      color: 'black',
+    },
+  }));
+
+  const StyledStepConnector = styled(StepConnector)(({ theme }) => ({
+    '& .MuiStepConnector-line': {
+      borderColor: 'black', // Connector line color
+    },
+  }));
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -388,14 +405,19 @@ export default function MDSxNRW() {
             activeStep={activeStep}
             sx={{ pt: 3, pb: 5 }}
             orientation={isVerticalLayout ? 'vertical' : 'horizontal'}
+            connector={<StyledStepConnector />}
           >
             {steps.map((label, index) => (
               <Step key={label}>
-                <StepLabel>
+                <StyledStepLabel
+                  style={{
+                    color: index === activeStep ? 'black' : 'white',
+                  }}
+                >
                   {isDeutsch
                     ? stepsObject.stepsAufDeutsch[index]
                     : stepsObject.stepsAufEnglisch[index]}
-                </StepLabel>
+                </StyledStepLabel>
               </Step>
             ))}
           </Stepper>
@@ -422,6 +444,12 @@ export default function MDSxNRW() {
                         '@media (max-width: 550px)': {
                           fontSize: 'small',
                         },
+                        color: '#fff',
+                        backgroundColor: '#000',
+                        '&:hover': {
+                          backgroundColor: '#000',
+                        },
+                        borderRadius: '0%',
                       }}
                       style={{ textTransform: 'none' }}
                       size='large'
@@ -442,6 +470,12 @@ export default function MDSxNRW() {
                         '@media (max-width: 550px)': {
                           fontSize: 'small',
                         },
+                        color: '#fff',
+                        backgroundColor: '#000',
+                        '&:hover': {
+                          backgroundColor: '#000',
+                        },
+                        borderRadius: '0%',
                       }}
                       onClick={downloadPDF}
                       id='downloadBtn'
@@ -466,6 +500,12 @@ export default function MDSxNRW() {
                         '@media (max-width: 550px)': {
                           fontSize: 'small',
                         },
+                        color: '#fff',
+                        backgroundColor: '#000',
+                        '&:hover': {
+                          backgroundColor: '#000',
+                        },
+                        borderRadius: '0%',
                       }}
                       style={{ textTransform: 'none', whiteSpace: 'normal' }}
                       size='large'
@@ -482,7 +522,16 @@ export default function MDSxNRW() {
                   <Button
                     variant='outlined'
                     onClick={handleNext}
-                    sx={{ mt: 3, ml: 1 }}
+                    sx={{
+                      mt: 3,
+                      ml: 1,
+                      color: '#fff',
+                      backgroundColor: '#000',
+                      '&:hover': {
+                        backgroundColor: '#000',
+                      },
+                      borderRadius: '0%',
+                    }}
                     style={{ textTransform: 'none' }}
                     size='large'
                   >

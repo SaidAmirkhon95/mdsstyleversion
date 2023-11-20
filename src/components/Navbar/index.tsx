@@ -9,16 +9,12 @@ import {
   ListItemButton,
   ListItemText,
 } from '@mui/material';
-// menu
 import DrawerItem from './DrawerItem';
-// rotas
 import { Link } from 'react-router-dom';
-
 import TranslationButton from '../../components/TranslationButton';
 import { useLanguage } from '../../LanguageContext';
 import { useLocation } from 'react-router-dom';
 
-// personalizacao
 const StyledToolbar = styled(Toolbar)({
   display: 'flex',
   justifyContent: 'space-between',
@@ -49,10 +45,6 @@ const itemListDeutsch = [
     text: 'Kontakt',
     to: '/contact',
   },
-  /* {
-    text: 'Connector Onboarding',
-    to: '/reiter',
-  }, */
 ];
 const itemListEnglisch = [
   {
@@ -71,55 +63,61 @@ const itemListEnglisch = [
     text: 'Contact',
     to: '/contact',
   },
-  /* {
-    text: 'Connector Onboarding',
-    to: '/reiter',
-  }, */
 ];
 
 const Navbar = () => {
   const { isDeutsch } = useLanguage();
   const location = useLocation();
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 800);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 800);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  const appBarRef = React.useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 600);
+      setIsMobileView(window.innerWidth <= 800);
+    };
+
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isScrollingDown = prevScrollPos < currentScrollPos;
+
+      if (appBarRef.current) {
+        const transformValue = isScrollingDown ? 'translateY(-100%)' : 'translateY(0)';
+        appBarRef.current.style.transform = transformValue;
+      }
+
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   return (
     <AppBar
       component='nav'
       position='sticky'
+      ref={appBarRef}
       sx={{
-        background: '#fff',
-        opacity: '0.9',
+        background: 'rgba(255, 255, 0, 1)',
+        transition: 'transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)',
         maxWidth: '2000px',
         overflow: 'hidden',
         margin: '0 auto',
+        top: '0',
+        left: '0',
+        right: '0',
+        zIndex: '1000',
       }}
       elevation={0}
-      style={{ boxShadow: '0 0 10px 0' }}
+      style={{ boxShadow: '0 0 0 0' }}
     >
       <StyledToolbar>
         {isMobileView ? (
@@ -152,18 +150,18 @@ const Navbar = () => {
                       component={Link}
                       to={item.to}
                       sx={{
-                        color:
+                        color: '#000',
+                        '&:hover': {
+                          textDecoration: 'underline',
+                        },
+                        textDecoration:
                           (text === 'Connector Onboarding' && location.pathname === '/reiter') ||
                           (text === 'Home' && location.pathname === '/') ||
                           (text === 'MDSxNRW' && location.pathname === '/info') ||
                           (text === 'Über uns' && location.pathname === '/about') ||
                           (text === 'Kontakt' && location.pathname === '/contact')
-                            ? '#11998E'
-                            : '#000',
-                        '&:hover': {
-                          backgroundColor: 'transparent',
-                          color: '#1e2a5a',
-                        },
+                            ? 'underline'
+                            : '',
                       }}
                     >
                       <ListItemText
@@ -186,18 +184,18 @@ const Navbar = () => {
                       component={Link}
                       to={item.to}
                       sx={{
-                        color:
+                        color: '#000',
+                        '&:hover': {
+                          textDecoration: 'underline',
+                        },
+                        textDecoration:
                           (text === 'Connector Onboarding' && location.pathname === '/reiter') ||
                           (text === 'Home' && location.pathname === '/') ||
                           (text === 'MDSxNRW' && location.pathname === '/info') ||
                           (text === 'About' && location.pathname === '/about') ||
                           (text === 'Contact' && location.pathname === '/contact')
-                            ? '#11998E'
-                            : '#000',
-                        '&:hover': {
-                          backgroundColor: 'transparent',
-                          color: '#1e2a5a',
-                        },
+                            ? 'underline'
+                            : '',
                       }}
                     >
                       <ListItemText

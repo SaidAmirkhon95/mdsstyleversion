@@ -30,7 +30,7 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#005B7F',
-      main: '#11998E',
+      main: '#ffff00',
       dark: '#005946',
       contrastText: '#fff',
     },
@@ -860,8 +860,6 @@ export default function Stepper3() {
               <FilterServiceLevel />
               <br />
               <FilterDeployementTyp />
-              {/* <br />
-              <FilterSelect /> */}
             </div>
           </Drawer>
         </div>

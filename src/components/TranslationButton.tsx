@@ -29,16 +29,18 @@ export default function BasicButtons() {
         sx={{
           color: '#000',
           marginLeft: '-10px',
+          '&:hover': {
+            textDecoration: 'underline',
+          },
         }}
       >
-        <LanguageIcon sx={{ color: isMobile ? '#414141' : '#000' }} />
         <div
           style={{
             marginLeft: isMobile ? '32px' : '5px',
             color: isMobile ? '#414141' : '#000',
           }}
         >
-          {isDeutsch ? 'English' : 'Deutsch'}
+          {isDeutsch ? 'EN' : 'DE'}
         </div>
       </Button>
     </Stack>

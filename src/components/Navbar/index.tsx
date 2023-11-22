@@ -83,7 +83,7 @@ const Navbar = () => {
       const currentScrollPos = window.pageYOffset;
       const isScrollingDown = prevScrollPos < currentScrollPos;
 
-      if (appBarRef.current) {
+      if (!isMobile && !isMobileView && appBarRef.current) {
         const transformValue = isScrollingDown ? 'translateY(-100%)' : 'translateY(0)';
         appBarRef.current.style.transform = transformValue;
       }
@@ -98,7 +98,7 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [isMobile, isMobileView, prevScrollPos]);
 
   return (
     <AppBar

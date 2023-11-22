@@ -24,7 +24,7 @@ const ScrollToAbout = () => {
   }, [activeSection]);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 1, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const scrollToSection = (index: any) => {

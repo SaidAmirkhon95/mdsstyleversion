@@ -191,7 +191,7 @@ const InfoSection7 = () => {
             {/* </Slide> */}
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           xs={12}
           md={6}
@@ -246,7 +246,7 @@ const InfoSection7 = () => {
               <Kontakt />
             </Typography>
           </Typography>
-        </Grid>
+        </Grid> */}
       </div>
     </ThemeProvider>
   );

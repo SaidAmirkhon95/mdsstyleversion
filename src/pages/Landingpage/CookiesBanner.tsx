@@ -157,9 +157,11 @@ const CookiesBanner = () => {
               onClick={handleAccept}
               style={{ border: '1px solid #000', marginBottom: '10px', width: '100%' }}
               variant='contained'
-              sx={{ '&:hover': {
-                backgroundColor: '#000',
-              }, }}
+              sx={{
+                '&:hover': {
+                  backgroundColor: '#000',
+                },
+              }}
             >
               {isDeutsch
                 ? translationFunction().deutschTranslations.cookies3

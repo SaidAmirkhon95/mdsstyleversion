@@ -25,7 +25,7 @@ import { useMyContext } from '../../MyContext';
 import { styled } from '@mui/system';
 import StepConnector from '@mui/material/StepConnector';
 
-function Copyright() {
+/* function Copyright() {
   return (
     <Typography variant='body2' color='text.secondary' align='center'>
       {'Copyright © '}
@@ -54,7 +54,7 @@ function Copyright() {
       </Typography>
     </Typography>
   );
-}
+} */
 
 const steps = ['Unternehmensinformationen', 'Kategorisierung', 'Empfehlung'];
 
@@ -381,18 +381,18 @@ export default function MDSxNRW() {
   }, []);
   const { isDeutsch } = useLanguage();
 
-  const StyledStepLabel = styled(StepLabel)(({ theme }) => ({
+  const StyledStepLabel = styled(StepLabel)(({ theme, optional }) => ({
     '& .MuiStepLabel-label': {
-      color: 'black',
+      color: '#000',
     },
     '& .MuiStepIcon-root': {
-      color: 'black',
+      color: optional ? '#ffff00' : '#000',
     },
   }));
 
   const StyledStepConnector = styled(StepConnector)(({ theme }) => ({
     '& .MuiStepConnector-line': {
-      borderColor: 'black', // Connector line color
+      borderColor: 'black',
     },
   }));
 
@@ -409,11 +409,7 @@ export default function MDSxNRW() {
           >
             {steps.map((label, index) => (
               <Step key={label}>
-                <StyledStepLabel
-                  style={{
-                    color: index === activeStep ? 'black' : 'white',
-                  }}
-                >
+                <StyledStepLabel optional={index < activeStep}>
                   {isDeutsch
                     ? stepsObject.stepsAufDeutsch[index]
                     : stepsObject.stepsAufEnglisch[index]}
@@ -544,7 +540,7 @@ export default function MDSxNRW() {
             </React.Fragment>
           )}
         </Paper>
-        <Copyright />
+        {/* <Copyright /> */}
       </Container>
     </ThemeProvider>
   );

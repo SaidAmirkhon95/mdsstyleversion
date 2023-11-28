@@ -157,7 +157,7 @@ const ImpressumText = () => {
         </Typography>
       </body>
       <br />
-      <footer
+      {/* <footer
         style={{
           marginBottom: '0px',
           height: '150px',
@@ -194,7 +194,7 @@ const ImpressumText = () => {
             <Kontakt />
           </Typography>
         </Typography>
-      </footer>
+      </footer> */}
     </Grid>
   );
 };

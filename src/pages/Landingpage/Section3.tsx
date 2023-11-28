@@ -117,8 +117,8 @@ const Section3 = () => {
                 }}
               >
                 <CardMedia
-                  sx={{ height: 190, backgroundSize: '70%' }}
-                  image='./FraunhoferISST.png'
+                  sx={{ height: 190, backgroundSize: '80%' }}
+                  image='./FraunhoferISST_black_logo.png'
                   style={{ backgroundColor: '#ffff00' }}
                 />
                 <CardContent>
@@ -259,7 +259,7 @@ const Section3 = () => {
               >
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '70%' }}
-                  image='./DSSC_logo_4c.png'
+                  image='./DSSC_logo_4c_black.png'
                   style={{ backgroundColor: '#ffff00' }}
                 />
                 <CardContent>
@@ -351,25 +351,11 @@ const Section3 = () => {
             Zum Connector Onboarding
           </Button>
         </Typography>
-        <Grid
+        {/* <Grid
           item
           xs={12}
           md={6}
-          sx={{
-            '@media (max-width: 600px)': {
-              marginTop: '480px !important',
-            },
-            '@media (max-width: 1100px)': {
-              marginTop: '150px !important',
-            },
-            '@media (max-width: 1535px)': {
-              marginTop: '200px',
-            },
-            '@media (min-width: 1536px)': {
-              marginTop: '160px',
-            },
-            backgroundColor: 'black',
-          }}
+          sx={{ backgroundColor: 'black' }}
           maxWidth='2000px'
           overflow='hidden'
           marginBottom='0px'
@@ -406,7 +392,7 @@ const Section3 = () => {
               <Kontakt />
             </Typography>
           </Typography>
-        </Grid>
+        </Grid> */}
       </div>
     </ThemeProvider>
   );

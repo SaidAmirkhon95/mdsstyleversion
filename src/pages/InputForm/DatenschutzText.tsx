@@ -338,7 +338,7 @@ const DatenschutzText = () => {
       </body>
       <br />
       <br />
-      <footer
+      {/* <footer
         style={{
           marginBottom: '0px',
           height: '150px',
@@ -375,7 +375,7 @@ const DatenschutzText = () => {
             <Kontakt />
           </Typography>
         </Typography>
-      </footer>
+      </footer> */}
     </Grid>
   );
 };

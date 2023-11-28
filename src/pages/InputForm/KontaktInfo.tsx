@@ -222,7 +222,7 @@ const KontaktInfo = () => {
         </Grid>
       </body>
       <br />
-      <footer>
+      {/* <footer>
         <Grid container direction='column' justifyContent='center' alignItems='flex-end'>
           <div style={{ marginBottom: '3.2rem' }}></div>
           <Grid
@@ -268,7 +268,7 @@ const KontaktInfo = () => {
             </Typography>
           </Grid>
         </Grid>
-      </footer>
+      </footer> */}
     </Grid>
   );
 };

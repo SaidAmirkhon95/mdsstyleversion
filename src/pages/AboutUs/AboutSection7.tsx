@@ -255,7 +255,7 @@ const AboutSection7 = () => {
             </Grid>
             {/* </Slide> */}
           </Grid>
-          <Grid
+          {/* <Grid
             sx={{
               '@media (max-width: 600px)': {
                 marginTop: '480px !important',
@@ -307,7 +307,7 @@ const AboutSection7 = () => {
                 <Kontakt />
               </Typography>
             </Typography>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
     </ThemeProvider>

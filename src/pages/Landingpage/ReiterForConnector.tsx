@@ -21,9 +21,10 @@ import { useLanguage } from '../../LanguageContext';
 import translationFunction from 'translationFunction';
 import OnboardButton from 'components/OnboardButton';
 import { useTableData } from '../../TableDataProvider';
-import { Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
+import { styled } from '@mui/system';
+import StepConnector from '@mui/material/StepConnector';
 
-function Copyright() {
+/* function Copyright() {
   return (
     <Typography variant='body2' color='text.secondary' align='center'>
       {'Copyright © '}
@@ -52,7 +53,7 @@ function Copyright() {
       </Typography>
     </Typography>
   );
-}
+} */
 
 const steps = ['Unternehmensinformationen', 'Kategorisierung', 'Empfehlung'];
 
@@ -192,7 +193,22 @@ export default function ReiterForConnector() {
     return encodeURIComponent(emailBody);
   };
   const recipientEmail =
-    'marcel.altendeitering@isst.fraunhofer.de,marius.hupperz@isst.fraunhofer.de';
+    'marcel.altendeitering@isst.fraunhofer.de; marius.hupperz@isst.fraunhofer.de';
+
+  const StyledStepLabel = styled(StepLabel)(({ theme, optional }) => ({
+    '& .MuiStepLabel-label': {
+      color: '#000',
+    },
+    '& .MuiStepIcon-root': {
+      color: optional ? '#ffff00' : '#000',
+    },
+  }));
+
+  const StyledStepConnector = styled(StepConnector)(({ theme }) => ({
+    '& .MuiStepConnector-line': {
+      borderColor: 'black',
+    },
+  }));
 
   return (
     <ThemeProvider theme={theme}>
@@ -215,14 +231,15 @@ export default function ReiterForConnector() {
             activeStep={activeStep}
             sx={{ pt: 3, pb: 5 }}
             orientation={isVerticalLayout ? 'vertical' : 'horizontal'}
+            connector={<StyledStepConnector />}
           >
             {steps.map((label, index) => (
               <Step key={label}>
-                <StepLabel>
+                <StyledStepLabel optional={index < activeStep}>
                   {isDeutsch
                     ? stepsObject.stepsAufDeutsch[index]
                     : stepsObject.stepsAufEnglisch[index]}
-                </StepLabel>
+                </StyledStepLabel>
               </Step>
             ))}
           </Stepper>
@@ -354,7 +371,7 @@ export default function ReiterForConnector() {
             </React.Fragment>
           )}
         </Paper>
-        <Copyright />
+        {/* <Copyright /> */}
       </Container>
     </ThemeProvider>
   );

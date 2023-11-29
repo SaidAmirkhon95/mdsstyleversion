@@ -258,7 +258,7 @@ const Section3 = () => {
                 }}
               >
                 <CardMedia
-                  sx={{ height: 190, backgroundSize: '70%' }}
+                  sx={{ height: 190, backgroundSize: '55%' }}
                   image='./DSSC_logo_4c_black.png'
                   style={{ backgroundColor: '#ffff00' }}
                 />

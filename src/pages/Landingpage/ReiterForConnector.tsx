@@ -266,11 +266,11 @@ export default function ReiterForConnector() {
                         '@media (max-width: 550px)': {
                           fontSize: 'small',
                         },
-                        color: '#fff',
-                        backgroundColor: '#000',
+                        color: '#000',
+                        backgroundColor: '#fff',
                         borderRadius: '0%',
                         '&:hover': {
-                          backgroundColor: '#000',
+                          backgroundColor: '#fff',
                         },
                       }}
                       style={{ textTransform: 'none' }}

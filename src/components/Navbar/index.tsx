@@ -101,115 +101,120 @@ const Navbar = () => {
   }, [isMobile, isMobileView, prevScrollPos]);
 
   return (
-    <AppBar
-      component='nav'
-      position='sticky'
-      ref={appBarRef}
-      sx={{
-        background: 'rgba(255, 255, 0, 1)',
-        transition: 'transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)',
-        maxWidth: '2000px',
-        overflow: 'hidden',
-        margin: '0 auto',
-        top: '0',
-        left: '0',
-        right: '0',
-        zIndex: '1000',
-      }}
-      elevation={0}
-      style={{ boxShadow: '0 0 0 0' }}
-    >
-      <StyledToolbar>
-        {isMobileView ? (
-          <img
-            src='logos/MDSxNRW_Bildlogo.svg'
-            alt='MDSxNRW_Mobile_Logo'
-            style={{
-              width: '10%',
-            }}
-          />
-        ) : (
-          <img
-            src='logos/MDSxNRW_Logo.svg'
-            alt='MDSxNRW_PC_Logo'
-            style={{
-              width: '12%',
-            }}
-          />
-        )}
-        <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-          <DrawerItem />
-        </Box>
-        <ListMenu>
-          {isDeutsch
-            ? itemListDeutsch.map((item) => {
-                const { text } = item;
-                return (
-                  <ListItem key={text}>
-                    <ListItemButton
-                      component={Link}
-                      to={item.to}
-                      sx={{
-                        color: '#000',
-                        '&:hover': {
-                          textDecoration: 'underline',
-                        },
-                        textDecoration:
-                          (text === 'Connector Onboarding' && location.pathname === '/reiter') ||
-                          (text === 'Home' && location.pathname === '/') ||
-                          (text === 'MDSxNRW' && location.pathname === '/info') ||
-                          (text === 'Über uns' && location.pathname === '/about') ||
-                          (text === 'Kontakt' && location.pathname === '/contact')
-                            ? 'underline'
-                            : '',
-                      }}
-                    >
-                      <ListItemText
-                        primary={text}
-                        sx={
-                          text === 'Über uns' || text === 'Connector Onboarding'
-                            ? { whiteSpace: 'nowrap' }
-                            : {}
-                        }
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                );
-              })
-            : itemListEnglisch.map((item) => {
-                const { text } = item;
-                return (
-                  <ListItem key={text}>
-                    <ListItemButton
-                      component={Link}
-                      to={item.to}
-                      sx={{
-                        color: '#000',
-                        '&:hover': {
-                          textDecoration: 'underline',
-                        },
-                        textDecoration:
-                          (text === 'Connector Onboarding' && location.pathname === '/reiter') ||
-                          (text === 'Home' && location.pathname === '/') ||
-                          (text === 'MDSxNRW' && location.pathname === '/info') ||
-                          (text === 'About' && location.pathname === '/about') ||
-                          (text === 'Contact' && location.pathname === '/contact')
-                            ? 'underline'
-                            : '',
-                      }}
-                    >
-                      <ListItemText
-                        primary={text}
-                        sx={text === 'Connector Onboarding' ? { whiteSpace: 'nowrap' } : {}}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                );
-              })}
-        </ListMenu>
-        {isMobile ? '' : <TranslationButton />}
-      </StyledToolbar>
-    </AppBar>
+    <>
+      <AppBar
+        component='nav'
+        position='sticky'
+        ref={appBarRef}
+        sx={{
+          //background: 'rgba(255, 255, 0, 1)',
+          background: '#fff',
+          opacity: '0.9',
+          transition: 'transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)',
+          maxWidth: '2000px',
+          overflow: 'hidden',
+          margin: '0 auto',
+          top: '0',
+          left: '0',
+          right: '0',
+          zIndex: '1000',
+        }}
+        elevation={0}
+        style={{ boxShadow: '0 0 0 0' }}
+      >
+        <StyledToolbar>
+          {isMobileView ? (
+            <img
+              src='logos/MDSxNRW_Bildlogo.svg'
+              alt='MDSxNRW_Mobile_Logo'
+              style={{
+                width: '10%',
+              }}
+            />
+          ) : (
+            <img
+              src='logos/MDSxNRW_Logo.svg'
+              alt='MDSxNRW_PC_Logo'
+              style={{
+                width: '12%',
+              }}
+            />
+          )}
+          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <DrawerItem />
+          </Box>
+          <ListMenu>
+            {isDeutsch
+              ? itemListDeutsch.map((item) => {
+                  const { text } = item;
+                  return (
+                    <ListItem key={text}>
+                      <ListItemButton
+                        component={Link}
+                        to={item.to}
+                        sx={{
+                          color: '#000',
+                          '&:hover': {
+                            textDecoration: 'underline',
+                          },
+                          textDecoration:
+                            (text === 'Connector Onboarding' && location.pathname === '/reiter') ||
+                            (text === 'Home' && location.pathname === '/') ||
+                            (text === 'MDSxNRW' && location.pathname === '/info') ||
+                            (text === 'Über uns' && location.pathname === '/about') ||
+                            (text === 'Kontakt' && location.pathname === '/contact')
+                              ? 'underline'
+                              : '',
+                        }}
+                      >
+                        <ListItemText
+                          primary={text}
+                          sx={
+                            text === 'Über uns' || text === 'Connector Onboarding'
+                              ? { whiteSpace: 'nowrap' }
+                              : {}
+                          }
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                  );
+                })
+              : itemListEnglisch.map((item) => {
+                  const { text } = item;
+                  return (
+                    <ListItem key={text}>
+                      <ListItemButton
+                        component={Link}
+                        to={item.to}
+                        sx={{
+                          color: '#000',
+                          '&:hover': {
+                            textDecoration: 'underline',
+                          },
+                          textDecoration:
+                            (text === 'Connector Onboarding' && location.pathname === '/reiter') ||
+                            (text === 'Home' && location.pathname === '/') ||
+                            (text === 'MDSxNRW' && location.pathname === '/info') ||
+                            (text === 'About' && location.pathname === '/about') ||
+                            (text === 'Contact' && location.pathname === '/contact')
+                              ? 'underline'
+                              : '',
+                        }}
+                      >
+                        <ListItemText
+                          primary={text}
+                          sx={text === 'Connector Onboarding' ? { whiteSpace: 'nowrap' } : {}}
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                  );
+                })}
+          </ListMenu>
+          {isMobile ? '' : <TranslationButton />}
+        </StyledToolbar>
+      </AppBar>
+      {/* {location.pathname === '/app' || location.pathname === '/reiter' ? <Footer /> : ''} */}
+    </>
   );
 };
 

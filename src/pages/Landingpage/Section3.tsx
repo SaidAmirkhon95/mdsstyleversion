@@ -118,8 +118,8 @@ const Section3 = () => {
               >
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '80%' }}
-                  image='./FraunhoferISST_black_logo.png'
-                  style={{ backgroundColor: '#ffff00' }}
+                  image='./FraunhoferISST.png'
+                  style={{ backgroundColor: '#f5f7f7' }}
                 />
                 <CardContent>
                   <Typography variant='body1' color='text.secondary' textAlign='center'>
@@ -186,7 +186,7 @@ const Section3 = () => {
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '50%' }}
                   image='./logo_MDS_black.svg'
-                  style={{ backgroundColor: '#ffff00' }}
+                  style={{ backgroundColor: '#f5f7f7' }}
                 />
                 <CardContent>
                   <Typography variant='body1' color='text.secondary' textAlign='center'>
@@ -259,8 +259,8 @@ const Section3 = () => {
               >
                 <CardMedia
                   sx={{ height: 190, backgroundSize: '55%' }}
-                  image='./DSSC_logo_4c_black.png'
-                  style={{ backgroundColor: '#ffff00' }}
+                  image='./DSSC_logo_4c.png'
+                  style={{ backgroundColor: '#f5f7f7' }}
                 />
                 <CardContent>
                   <Typography variant='body1' color='text.secondary' textAlign='center'>

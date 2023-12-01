@@ -440,10 +440,10 @@ export default function MDSxNRW() {
                         '@media (max-width: 550px)': {
                           fontSize: 'small',
                         },
-                        color: '#fff',
-                        backgroundColor: '#000',
+                        color: '#000',
+                        backgroundColor: '#fff',
                         '&:hover': {
-                          backgroundColor: '#000',
+                          backgroundColor: '#fff',
                         },
                         borderRadius: '0%',
                       }}
